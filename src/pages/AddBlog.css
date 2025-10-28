@@ -1,0 +1,116 @@
+.add-blog-page {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 60px 0;
+}
+
+.password-form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.password-description {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-bottom: 30px;
+}
+
+.password-form {
+  background-color: #111111;
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid #333;
+}
+
+.blog-form {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #111111;
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid #333;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #ffffff;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.success-message {
+  background-color: #2d5a2d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid #4a7c4a;
+}
+
+.error-message {
+  background-color: #5a2d2d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid #7c4a4a;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .password-form,
+  .blog-form {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
