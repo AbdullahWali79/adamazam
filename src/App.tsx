@@ -1,31 +1,37 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import AboutBook from './pages/AboutBook';
-import AboutAuthor from './pages/AboutAuthor';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import AddBlog from './pages/AddBlog';
-import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
+  console.log('App is rendering');
+  
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-the-book" element={<AboutBook />} />
-          <Route path="/about-the-author" element={<AboutAuthor />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
-          <Route path="/blogs/addblogs" element={<AddBlog />} />
-          <Route path="/contact-us" element={<Contact />} />
-        </Routes>
+    <div style={{ 
+      backgroundColor: '#000000', 
+      color: '#ffffff', 
+      minHeight: '100vh', 
+      padding: '20px',
+      fontFamily: 'Arial, sans-serif'
+    }}>
+      <h1>Adam Azam Portfolio</h1>
+      <p>Website is working!</p>
+      <div style={{ marginTop: '20px' }}>
+        <h2>Test Navigation</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ margin: '10px 0' }}>
+            <a href="/about-the-book" style={{ color: '#ffffff', textDecoration: 'none' }}>About The Book</a>
+          </li>
+          <li style={{ margin: '10px 0' }}>
+            <a href="/about-the-author" style={{ color: '#ffffff', textDecoration: 'none' }}>About The Author</a>
+          </li>
+          <li style={{ margin: '10px 0' }}>
+            <a href="/blog" style={{ color: '#ffffff', textDecoration: 'none' }}>Blog</a>
+          </li>
+          <li style={{ margin: '10px 0' }}>
+            <a href="/contact-us" style={{ color: '#ffffff', textDecoration: 'none' }}>Contact Us</a>
+          </li>
+        </ul>
       </div>
-    </Router>
+    </div>
   );
 }
 

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { supabase, Blog } from '../lib/supabase';
+import { supabase, Blog as BlogType } from '../lib/supabase';
 import './BlogPost.css';
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const [blog, setBlog] = useState<Blog | null>(null);
+  const [blog, setBlog] = useState<BlogType | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 

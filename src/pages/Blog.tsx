@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { supabase, Blog } from '../lib/supabase';
+import { supabase, Blog as BlogType } from '../lib/supabase';
 import './Blog.css';
 
 const Blog: React.FC = () => {
-  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [blogs, setBlogs] = useState<BlogType[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 

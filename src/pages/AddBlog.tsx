@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { supabase, Blog } from '../lib/supabase';
+import { supabase } from '../lib/supabase';
 import './AddBlog.css';
 
 const AddBlog: React.FC = () => {
@@ -26,7 +26,7 @@ const AddBlog: React.FC = () => {
 
   const fetchAdminPassword = async () => {
     try {
-      const { data, error } = await supabase
+      const { data } = await supabase
         .from('admin_passwords')
         .select('password')
         .order('created_at', { ascending: false })
@@ -68,7 +68,7 @@ const AddBlog: React.FC = () => {
     try {
       const slug = formData.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
       
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('blogs')
         .insert([{
           ...formData,
